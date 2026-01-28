@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-rpc-950 text-rpc-text;
+  }
+
+  /* Custom scrollbar for webkit to match the dark theme */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-rpc-900;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-rpc-700 rounded;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-rpc-muted;
+  }
+}
+
+/* Custom utility for the watchlist scroll area */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
